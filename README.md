@@ -33,3 +33,13 @@
 
 ## Ejecutar la app
 
+```Bash
+blogApp$ python3 manage.py runserver
+```
+
+django usa por defecto el puerto 8000.
+si quieres cambiarlo al puerto 3000 o cualquera, corre lo siguiente.
+
+```Bash
+blogApp$ python3 manage.py runserver 3000
+```
