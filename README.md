@@ -9,9 +9,9 @@
 - Django 3.2.5.
 - PostgreSQL 12.8
 
-## Antes de correr la app
+## Antes de ejecutar la app
 
-- Cree la base datos:
+- Crea la base datos:
     - Corre el siguiente comando
     ```Bash
     blogApp$ cat DB.sql | psql -U postgre -W 
@@ -25,8 +25,11 @@
     ```
     Asegurate de estar dentro de tu proyecto para correrlo
 
-- Por último corre el comando para creat tus modelos dentro de la base de datos
+- Por último corre el comando para crear tus modelos dentro de la base de datos
 
     ```Bash
-    blogApp$ python3 manage.py makemigratios 
+    blogApp$ python3 manage.py migrate 
     ```
+
+## Ejecutar la app
+
