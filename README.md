@@ -68,4 +68,4 @@ Cuando ingreses al navegador y escribas la dirección `http://localhost:3000/` a
     - toma el username y password.
     - ingresalos en el login
 
-![](https://imgur.com/z3A8JAa)
+![Usuarios disponibles](https://i.imgur.com/z3A8JAa.png)
