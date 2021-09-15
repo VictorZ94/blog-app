@@ -11,7 +11,7 @@
 
 # Before run
 
-- execute the Application isolated by virtualenv python3.
+- execute the Application isolated with virtualenv python3.
 
     ### Install pip first
     ```Bash
