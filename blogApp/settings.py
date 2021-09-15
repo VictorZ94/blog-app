@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import environ
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -78,12 +80,16 @@ WSGI_APPLICATION = 'blogApp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+env = environ.Env()
+environ.Env.read_env()
+PASSWORD_DB = env("PASSWORD")
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'blog_app',
         'USER': 'postgres',
-        'PASSWORD': 'root',
+        'PASSWORD': PASSWORD_DB,
         'HOST': 'localhost',
         'PORT': 5432
     }
