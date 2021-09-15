@@ -1,0 +1,54 @@
+{% extends 'posts/base.html' %}
+
+{% block head_content %}
+    <title>Blog App - Read posts</title>
+{% endblock %}
+
+{% block body_content %}
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="card-title text-center">{{ post.title }}</h1>
+                <hr>
+                <p class="card-text text-center">
+                    {{ post.content|linebreaks }}
+                </p>
+            </div>
+        </div>
+    </div>
+<HR></HR>
+    <div class="container">
+        <div class="row">
+            <div class="card my-4">
+                <h5 class="card-header">Leave your comments!!</h5>
+                <div class="card-body">
+                    <form action="{% url 'read' post.id user.id post.slug %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-outline mb-3">
+                            <textarea class="form-control" name="comment" id="" cols="10" rows=""></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% for comment in comments %}
+            <div class="card mb-3 col-6 offset-1">
+                <div class="card-header">
+                    Comment {{ forloop.counter }} by {{ comment.user }}
+                </div>
+                <div class="card-body">
+                    <p class="text-muted">{{ comment.date_posted }}</p>
+                    <p class="card-text">{{ comment.content|linebreaks }}</p>
+                    <button><a href="{% url 'del_comment' post.id user.id post.slug comment.id %} " class="btn btn-danger">DELETE</a></button>
+                  </div>
+            </div>
+            {% empty %}
+                <p>There are no comments yet.</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -43,3 +43,8 @@ si quieres cambiarlo al puerto 3000 o cualquera, corre lo siguiente.
 ```Bash
 blogApp$ python3 manage.py runserver 3000
 ```
+
+Ahora ingresa al navegador y entra la dirección http.
+```Bash
+blogApp$ http://localhost:3000/
+```

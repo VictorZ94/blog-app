@@ -1,0 +1,38 @@
+{% extends 'posts/base.html' %}
+
+{% block head_content %}
+    <title>Blog App - Home</title>
+    <style>
+        .card{
+            box-shadow: 0 16px 48px #E3E7EB;
+        }
+    </style>
+{% endblock %}
+
+
+{% block body_content %}
+
+        <div class="container">
+            <div class="row">
+                {% block search %}
+                    {% include 'posts/search.html' %}
+                {% endblock search %}
+
+                {% for post in posts %}
+                <!-- Blog Entries Column -->
+                    <div class="col-md-8 mt-3 left">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h2 class="card-title">{{ post.title }}</h2>
+                                <p class="card-text text-muted h6"> {{ post.author }} | {{ post.modified }} | {{ post.category}} </p>
+                                <p class="card-text">{{ post.content }}</p>
+                                <a href="{% url 'read' post.slug %}" class="btn btn-primary">Read More &rarr;</a>
+                                <a href="{% url 'edit' post.slug %}" class="btn btn-warning">Edit</a>
+                                <a href="{% url 'delete' post.id %}" class="btn btn-danger">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+{% endblock  %}

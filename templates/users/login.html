@@ -1,0 +1,40 @@
+{% extends 'users/base.html' %}
+
+{% block head_content %}
+    <title>Blog App Sing in</title>
+{% endblock  %}
+
+{% block container %}
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="mainNav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Blog App</a>
+            <div class="justify-content-end" id="">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item text-black">
+                        <a class="nav-link text-black font-weight-bold" href="{% url 'signup' %}">Sign up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% if error %}
+        <p class="alert alert-danger">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        <span class="mx-auto d-block pb-4" style="max-width: 30%;">Login</span> 
+        <div class="form-label mb-3">
+            <input type="text" class="form-control" placeholder="Username", name="username">
+        </div>
+        <div class="form-label">
+            <input class="form-control" type="password", placeholder="Password", name="password">
+        </div>
+        <button class="btn btn-primary mt-5" type="submit">
+            Sing in
+        </button>
+    </form>
+
+{% endblock  %}

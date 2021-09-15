@@ -1,0 +1,48 @@
+{% extends 'posts/base.html' %}
+
+{% block head_content %}
+    <title>Blog App - Create new posts</title>
+    <style>
+        body {
+        font-family: "Roboto", sans-serif;
+        font-size: 17px;
+        background-color: #fdfdfd;
+    }
+    .shadow {
+        box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+    }
+
+</style>
+{% endblock %}
+
+
+{% block body_content %}
+
+    <div class="container p-5">
+        <div class="row">
+            <form method="POST" action="{% url 'create'%}">
+                {% csrf_token %}
+                <div class="col-6 mb-3">
+                    <input type="text" class="form-control" id="" placeholder="Title" name="title" required>
+                </div>
+                <div class="col-6 mb-3">
+                    <select class="form-select" name="category" id="category">
+                        <option value="tech">TECH</option>
+                        <option value="science">SCIENCE</option>
+                        <option value="iot">IoT</option>
+                        <option value="ai">AI</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <textarea name="content" class="form-control" id="" cols="" rows="10" placeholder="Write Something..." required></textarea>
+
+                </div>
+                <input type="text" value="{{ user.id }}" name="author_id" style="display: none">
+
+                <div class="">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
