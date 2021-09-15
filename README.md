@@ -16,7 +16,8 @@
     ```Bash
     blogApp$ cat DB.sql | psql -U postgre -W 
     ```
-    Esto creara la base de datos para recibir todos los modelos
+    Esto creara la base de datos para recibir todos los modelos.
+    Nota: guarda la contraseña de tu DB en un archivo .env `PASSOWRD=your_password` dentro de la carpeta blogApp en donde está settings.py 
 
 - Ejecuta el comando de `makemigrations` de Django, crea la nuevas migraciones de tus modelos
 
