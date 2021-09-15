@@ -83,6 +83,7 @@ WSGI_APPLICATION = 'blogApp.wsgi.application'
 env = environ.Env()
 environ.Env.read_env()
 PASSWORD_DB = env("PASSWORD")
+PORT_DB = env("PORT")
 
 DATABASES = {
     'default': {
@@ -91,7 +92,7 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': PASSWORD_DB,
         'HOST': 'localhost',
-        'PORT': 5432
+        'PORT': PORT_DB
     }
 }
 
