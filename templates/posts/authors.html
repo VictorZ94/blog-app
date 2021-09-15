@@ -26,7 +26,7 @@
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text text-muted h6"> {{ post.author }} | {{ post.modified }} | {{ post.category}} </p>
                                 <p class="card-text">{{ post.content }}</p>
-                                <a href="{% url 'read' post.slug %}" class="btn btn-primary">Read More &rarr;</a>
+                                <a href="{% url 'read' post.id user.id post.slug %}" class="btn btn-primary">Read More &rarr;</a>
                                 <a href="{% url 'edit' post.slug %}" class="btn btn-warning">Edit</a>
                                 <a href="{% url 'delete' post.id %}" class="btn btn-danger">Delete</a>
                             </div>
