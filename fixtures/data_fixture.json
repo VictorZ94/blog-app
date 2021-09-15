@@ -1,0 +1,941 @@
+[
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 4,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 4,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 4,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 4,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 5,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 5,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 5,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 5,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 6,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 6,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 6,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 6,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add post",
+        "content_type": 7,
+        "codename": "add_post"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change post",
+        "content_type": 7,
+        "codename": "change_post"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete post",
+        "content_type": 7,
+        "codename": "delete_post"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view post",
+        "content_type": 7,
+        "codename": "view_post"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add likes",
+        "content_type": 8,
+        "codename": "add_likes"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change likes",
+        "content_type": 8,
+        "codename": "change_likes"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete likes",
+        "content_type": 8,
+        "codename": "delete_likes"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view likes",
+        "content_type": 8,
+        "codename": "view_likes"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add blog comment",
+        "content_type": 9,
+        "codename": "add_blogcomment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change blog comment",
+        "content_type": 9,
+        "codename": "change_blogcomment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete blog comment",
+        "content_type": 9,
+        "codename": "delete_blogcomment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view blog comment",
+        "content_type": 9,
+        "codename": "view_blogcomment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add my user",
+        "content_type": 10,
+        "codename": "add_myuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change my user",
+        "content_type": 10,
+        "codename": "change_myuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete my user",
+        "content_type": 10,
+        "codename": "delete_myuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view my user",
+        "content_type": 10,
+        "codename": "view_myuser"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$0bZWZEKT8kb5pI9tKvoREn$JDX/TAjtZQCB9Mbi8R7V6vG2jimuEDXz/ktz2J65n/U=",
+        "last_login": "2021-09-14T17:17:52.524Z",
+        "is_superuser": false,
+        "username": "nmcguire0",
+        "first_name": "Nikolas",
+        "last_name": "McGuire",
+        "email": "nmcguire0@illinois.edu",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-09-14T17:04:45.617Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$BNWy3hpfyVseA8uUf7Urw0$x5Pbh26QRJb+Epbz6Yg3ziz+BiPyiEGpXrRQHnBpzZ4=",
+        "last_login": "2021-09-14T17:19:39.468Z",
+        "is_superuser": false,
+        "username": "olawlie1",
+        "first_name": "Orlando",
+        "last_name": "Lawlie",
+        "email": "olawlie1@mediafire.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-09-14T17:06:08.401Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$lT2zpIPRb9RA1Z0VJQzH9P$+1SqEV5c3HnWpdRb+w6Drn5+ZtuYtwhvQDR0XDJwFW4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "daglione2",
+        "first_name": "Delcina",
+        "last_name": "Aglione",
+        "email": "daglione2@geocities.jp",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-09-14T17:08:09.018Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$XZJVJbWkJG3TRdXGlo805r$caqqx9T52SqSVcilv96w77G2OpX6a8Tqy+iPQl6iNUw=",
+        "last_login": "2021-09-14T17:23:42.276Z",
+        "is_superuser": false,
+        "username": "wwadhams3",
+        "first_name": "Winifred",
+        "last_name": "Wadhams",
+        "email": "wwadhams3@gnu.org",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-09-14T17:09:26.502Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$xn80aIVG5mrP8CSR2YzRWk$nNuB5Wfp/9A7sxEPctEK8+rwh/gZSC6toMVxhRgFjYY=",
+        "last_login": "2021-09-14T17:27:58.146Z",
+        "is_superuser": false,
+        "username": "ghardiker4",
+        "first_name": "Gayelord",
+        "last_name": "Hardiker",
+        "email": "ghardiker4@amazon.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-09-14T17:10:30.105Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$sXMQ7ioWdnjPJwOAuaYHF1$l5JoH3UICXbSS+cLhi1daHOnp3210hlGbAkS9kb5lwU=",
+        "last_login": "2021-09-14T17:47:07.274Z",
+        "is_superuser": false,
+        "username": "mcristofolo5",
+        "first_name": "Micky",
+        "last_name": "Cristofolo",
+        "email": "mcristofolo5@ameblo.jp",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-09-14T17:11:10.354Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$EHiN6TLoP8nn5P0eAvWorS$qyceH34IscP4/NY2wc0JYwYOdSdpqyBmshX5in5FScQ=",
+        "last_login": "2021-09-15T02:42:17.129Z",
+        "is_superuser": false,
+        "username": "cjobin6",
+        "first_name": "Constantino",
+        "last_name": "Jobin",
+        "email": "cjobin6@behance.net",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-09-14T17:11:52.979Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$A1nyKy1H1yIPY9XlAUEssL$Sy/EDpSXYIjm+53xpEkIwsM+kha+0NUDQQyDAM4B0Vk=",
+        "last_login": "2021-09-15T02:44:11.821Z",
+        "is_superuser": false,
+        "username": "bmooney7",
+        "first_name": "Britta",
+        "last_name": "Mooney",
+        "email": "bmooney7@whitehouse.gov",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-09-14T17:13:39.784Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 9,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$B8KAKJ1XUfdmMylHGAxFa4$4bLq9XbpPFddnDj7032QBVZaOafUilG8uIzrtrpipvI=",
+        "last_login": "2021-09-15T02:45:16.402Z",
+        "is_superuser": false,
+        "username": "aklausewitz8",
+        "first_name": "Abraham",
+        "last_name": "Klausewitz",
+        "email": "aklausewitz8@ed.gov",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-09-14T17:14:19.365Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 10,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$1wWc314mBJH4wfdZXUNYO7$1iK0TkGbP5h3hXyJIf9o2Fw2L4R2T+pNohJS0z2IBMc=",
+        "last_login": "2021-09-15T02:46:40.294Z",
+        "is_superuser": false,
+        "username": "mmcall9",
+        "first_name": "Mallory",
+        "last_name": "Mcall",
+        "email": "mmcall9@sfgate.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-09-14T17:14:57.090Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 11,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$O4pR7MOCt0Uh8rL2F6v2Qx$J/2xZMcgojq01CJbnBoeYCtCiKXB8b2ofm17luQM6ps=",
+        "last_login": "2021-09-15T14:42:43.304Z",
+        "is_superuser": false,
+        "username": "VictorZ94",
+        "first_name": "Victor",
+        "last_name": "Zuluaga",
+        "email": "zrvictor@outlook.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-09-14T17:15:32.402Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "posts",
+        "model": "post"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "posts",
+        "model": "likes"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "posts",
+        "model": "blogcomment"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "users",
+        "model": "myuser"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "yw67fwdilasizya9v2mphfot8lanyntb",
+    "fields": {
+        "session_data": ".eJxVzjEPgjAQBeC_YphNw11pSx3dXR1cyLW9AkpoAnQy_ndpwqDrey9f3rvqKG9Dl1deujFUlwqgOv-GjvyL59KEJ819Ej7N2zI6USbiaFdxS4Gn67H9AwZah-LKiBFsC6a1NTXswFqJpD0HROUJATQ23rAC5UjW0pAxGjlGzVYF3NHC7dJ99FtaTo88Zeppz8tvgM8Xes9BZg:1mQW7X:i7OHkoxhS6l1Bx7HrToR178ewuPSS55Jd4iio8r4l2E",
+        "expire_date": "2021-09-29T14:42:43.451Z"
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 1,
+    "fields": {
+        "author": 11,
+        "title": "PostMortem",
+        "content": "Context\r\nOn Monday 16 November 2020 (GMT-5). Working on servers, I had the responsibility of setting up, installing, and maintaining the webserver. Then, I installed Nginx web server, set it up, and installed all packages and dependencies required.\r\nIssue Summary\r\nOn Tuesday 17 November 2020 (GMT-5) 9:00 AM start the issue detected, Newly tried login into a server. But, this was not responding. The network was unavailable for a duration of 4 hours 15minutes. Tuesday 17 November 2020 (GMT-5) 1:15 PM end. Now, I understand how important the flexibility to install new resources and scale up, is for our users, and apologize for this incident.\r\nWhen I was trying to set OpenSSH-server connection, I’m having some issues connecting.\r\nError message: Connection timeout for ssh server.\r\nImpact\r\nThe impact was the process to deploy a new application it set back. Fortunately, was an internal error and was detected before get out to production.\r\nRoot cause\r\nThe issue was triggered by the firewall, among the settings up that I did, enable the firewall, this by default no enable the port 22/TCP for SSH connections. Manually must indicate it to the firewall that allows port 22/tcp connection remotes via SSH. Otherwise, all attempts via SSH the firewall it will deny.\r\nRemediation and prevention\r\nTo resolve the issue, the engineer had to destroy the server and start one again and setting it up and install it all again. Having special matter when it manipulates the firewall in a server.",
+        "slug": "postmortem",
+        "category": "tech",
+        "created": "2021-09-14T17:16:57.145Z",
+        "modified": "2021-09-14T17:16:57.146Z"
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 2,
+    "fields": {
+        "author": 1,
+        "title": "Contracture, elbow",
+        "content": "Elbow contracture, sometimes simply called a stiff elbow, is an injury that causes pain and limits bending of your elbow. The pain may affect your ability to perform daily activities such as getting dressed, driving or using a keyboard.\r\n\r\nElbow specialists at University of Maryland Medical Center can help. Call 410-840-7856 to make an appointment, or request an appointment online.\r\n\r\nCauses of Elbow Contracture\r\nPainful contracture is caused by:\r\n\r\nArthritis\r\nBone growth in soft tissue, muscle or tendons\r\nDislocation, breaks and other injuries\r\nScarring of soft tissue around the elbow joint\r\nOnce our elbow specialists diagnose your condition they'll discuss all of your treatment options with you.\r\n\r\nNonsurgical Treatment\r\nDepending on your condition, we may recommend a nonsurgical therapy to restore your range of motion and relieve pain. Therapies can include changing daily activities, using elbow splints or physical therapy.",
+        "slug": "contracture,-elbow",
+        "category": "tech",
+        "created": "2021-09-14T17:18:26.630Z",
+        "modified": "2021-09-14T17:18:26.630Z"
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 3,
+    "fields": {
+        "author": 2,
+        "title": "Toxic effect of copper and its compounds, undetermined, init",
+        "content": "Recovery\r\nElbow contracture after surgery by a University of Maryland Medical Center orthopedic surgeon\r\nPost-operative range of motion in same patient:\r\n\r\nYou begin physical therapy within 24 hours after elbow release surgery.\r\n\r\nYour physical therapist will also teach you simple exercises you will continue to do at home two to three times a day.\r\n\r\nPatients usually go home the same day of the surgery.\r\n\r\nTo speed recovery, you may use a continuous passive motion (CPM) machine for the first weeks at home. You can resume activities such as golf and swimming after about six weeks.\r\n\r\nOutpatient physical therapy is usually not necessary for elbow contracture release.\r\n\r\nMake an Appointment\r\nTo make an appointment with one of our elbow specialists, or to learn more about treatment options, care and locations, call 410-840-7856 or request an appointment online.",
+        "slug": "toxic-effect-of-copper-and-its-compounds,-undetermined,-init",
+        "category": "science",
+        "created": "2021-09-14T17:20:24.928Z",
+        "modified": "2021-09-14T17:20:24.928Z"
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 4,
+    "fields": {
+        "author": 4,
+        "title": "Displacement of cranial or spinal infusion catheter, sequela",
+        "content": "What is IoT?\r\nSo IoT is one of the most important technologies of the Fourth Industrial Revolution. It occurs when any object is connected to the internet and through sensors, it is given the power to interpret sensations from the environment to transfer data through a network. This quality of receiving and transmitting information makes objects “communicate with each other”, generating and sharing valuable data for different purposes.\r\nEven today we live in a world where there are more devices connected to the Internet of Things than human beings. Juniper research\r\nCombined with other technologies from the Fourth Industrial Revolution, such as data science and artificial intelligence, these connected devices allow the collection and analysis of information, as well as the execution of an action to facilitate specific tasks and learn from different processes.\r\nfor example, nowadays, not only phones and tablets are connected internet to. A growing network of objects is also accessing the Internet: locks, refrigerators, televisions, exercise wristbands and much more.\r\nHow it works IoT?",
+        "slug": "displacement-of-cranial-or-spinal-infusion-catheter,-sequela",
+        "category": "iot",
+        "created": "2021-09-14T17:24:43.676Z",
+        "modified": "2021-09-14T17:24:43.676Z"
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 5,
+    "fields": {
+        "author": 5,
+        "title": "Monoplegia of upper limb affecting right nondominant side",
+        "content": "Other devices, can receive information and then, to perform an action. for example, a smart lock receives the opening signal from you and consequently unlocks a door.\r\nAnother example can be. Imagine that the alarm sounds to wake you up and while you are going to take a shower your coffee maker starts to cook a coffee for you, after receiving the alarm signal. Incredible, do you think so?. I want one for me. and so on, there may be more and more examples.\r\nIn general, smart technology helps things (Devices physical) work better, more efficiently and in sync.",
+        "slug": "monoplegia-of-upper-limb-affecting-right-nondominant-side",
+        "category": "tech",
+        "created": "2021-09-14T17:28:53.627Z",
+        "modified": "2021-09-14T17:28:53.627Z"
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 7,
+    "fields": {
+        "author": 6,
+        "title": "lac cereb, w LOC of 30 minutes or less, subs",
+        "content": "En las últimas horas se conoció que EPM invitó a un grupo de concejales de Medellín a México para conocer el funcionamiento de su filial Ticsa.\r\n\r\nAl respecto, el concejal del partido Centro Democrático, Sebastián López Valencia, uno de los asistentes a la visita internacional, le dijo a El Colombiano que el viaje hace parte de sus labores como concejal.",
+        "slug": "lac-cereb,-w-loc-of-30-minutes-or-less,-subs",
+        "category": "ai",
+        "created": "2021-09-14T17:47:34.999Z",
+        "modified": "2021-09-14T17:47:34.999Z"
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 8,
+    "fields": {
+        "author": 7,
+        "title": "Driver of pk-up van inj in clsn w nonmtr veh in traf, init",
+        "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n\r\nOtro lorem ipsum",
+        "slug": "driver-of-pk-up-van-inj-in-clsn-w-nonmtr-veh-in-traf,-init",
+        "category": "tech",
+        "created": "2021-09-15T02:43:23.665Z",
+        "modified": "2021-09-15T03:56:10.492Z"
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 9,
+    "fields": {
+        "author": 8,
+        "title": "Unsp disp fx of first cervcal vert, subs for fx w routn heal",
+        "content": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\r\n\r\nThe standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+        "slug": "unsp-disp-fx-of-first-cervcal-vert,-subs-for-fx-w-routn-heal",
+        "category": "tech",
+        "created": "2021-09-15T02:44:37.975Z",
+        "modified": "2021-09-15T02:44:37.975Z"
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 10,
+    "fields": {
+        "author": 9,
+        "title": "Unspecified physeal fracture of unspecified metatarsal, 7thK",
+        "content": "Where can I get some?\r\nThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+        "slug": "unspecified-physeal-fracture-of-unspecified-metatarsal,-7thk",
+        "category": "tech",
+        "created": "2021-09-15T02:45:34.073Z",
+        "modified": "2021-09-15T02:45:34.073Z"
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 11,
+    "fields": {
+        "author": 10,
+        "title": "Displ transverse fx shaft of humer, r arm, 7thK",
+        "content": "Phasellus est lorem, tincidunt in dignissim at, blandit eget eros. Phasellus eleifend, turpis vitae congue congue, velit sem luctus tortor, ut semper ante dolor sit amet neque. Maecenas congue mollis lectus, at rhoncus dolor finibus nec. Maecenas consequat neque nunc, id consectetur nisl faucibus a. Pellentesque et vehicula justo. Duis arcu lectus, euismod nec odio a, feugiat pharetra metus. Quisque ut ex facilisis, sodales magna vel, pulvinar mi. Cras malesuada ornare magna vel pharetra. Aliquam sit amet tellus magna. Suspendisse vitae purus sodales, egestas augue non, condimentum elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent aliquam, velit sodales imperdiet fermentum, nulla risus posuere quam, a facilisis magna nunc eu neque.\r\n\r\nAenean in ipsum at nisi pretium tempor. Donec sem arcu, egestas sit amet elit eu, laoreet pulvinar metus. In ac pulvinar turpis. Mauris et dignissim mi, sed auctor lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean fermentum quis turpis non auctor. Praesent egestas commodo augue eu iaculis. Vestibulum lobortis risus sed vestibulum gravida. Donec varius eros id leo ultricies, ac blandit lorem convallis. Mauris vestibulum rhoncus felis vel ullamcorper. Pellentesque in odio commodo libero aliquam varius. Nam nec nisi viverra, mattis lectus eget, suscipit magna. Vivamus interdum at odio sed aliquet. Vestibulum pellentesque aliquet auctor. Nunc pretium erat nec sapien pretium mollis. Vivamus quam est, gravida ut arcu eu, tincidunt lacinia ligula.\r\n\r\nMaecenas sagittis vestibulum ex, vitae rutrum nunc egestas sed. Cras porttitor augue eu aliquam lobortis. Ut imperdiet facilisis ipsum, at feugiat sapien. Aenean congue vitae sapien quis pulvinar. Pellentesque at accumsan neque. Ut sed sem nec magna pharetra bibendum. Vestibulum hendrerit nunc nunc, a pulvinar neque consectetur vitae. Phasellus ac rutrum lectus. Nam eu nibh lorem. Aenean quis magna magna. Duis interdum, orci sed tincidunt bibendum, urna turpis porta eros, nec scelerisque mi purus eget lacus. Maecenas id bibendum risus, sed volutpat mi. Donec a consequat lorem. Suspendisse quis felis sed odio sagittis aliquam id at ipsum.\r\n\r\nCurabitur tincidunt quam id tortor facilisis semper. Fusce quam tellus, scelerisque eget vehicula ut, pretium sit amet diam. Suspendisse quis luctus mauris, sed tempor libero. Vestibulum dignissim justo sed diam gravida sodales. Praesent sollicitudin congue est at ornare. Curabitur ac accumsan erat, et accumsan ante. Duis eget lectus quis metus dapibus accumsan a ut elit.",
+        "slug": "displ-transverse-fx-shaft-of-humer,-r-arm,-7thk",
+        "category": "tech",
+        "created": "2021-09-15T02:47:44.804Z",
+        "modified": "2021-09-15T02:47:44.804Z"
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 12,
+    "fields": {
+        "author": 11,
+        "title": "everything about security concerns",
+        "content": "Windows\r\nTo save passwords and secret keys in environment variables on Windows, you will need to open Advance System Setting.\r\n\r\nYou can navigate to control panel > System and Security > System > Advanced system Settings.\r\nNow in Advance System Setting click on Environment Variables.\r\nHere we can add new user variables and new system variables. We will add user variable by clicking New under user variables.\r\n\r\nIn the new window you can add Variable name and Variable value and click ok.\r\nNow, click Ok on Environment Variables window to save changes.",
+        "slug": "everything-about-security-concerns",
+        "category": "ai",
+        "created": "2021-09-15T14:44:41.650Z",
+        "modified": "2021-09-15T14:44:41.650Z"
+    }
+},
+{
+    "model": "posts.likes",
+    "pk": 1,
+    "fields": {
+        "user": 9,
+        "post": 10
+    }
+},
+{
+    "model": "posts.blogcomment",
+    "pk": 4,
+    "fields": {
+        "blogpost": 8,
+        "user": 11,
+        "content": "Hello World",
+        "date_posted": "2021-09-15T05:00:43.591Z"
+    }
+},
+{
+    "model": "users.myuser",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "biography": "",
+        "phone_number": "",
+        "created": "2021-09-14T17:04:45.866Z",
+        "modified": "2021-09-14T17:04:45.866Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "users.myuser",
+    "pk": 2,
+    "fields": {
+        "user": 2,
+        "biography": "",
+        "phone_number": "",
+        "created": "2021-09-14T17:06:08.649Z",
+        "modified": "2021-09-14T17:06:08.649Z",
+        "is_admin": true
+    }
+},
+{
+    "model": "users.myuser",
+    "pk": 3,
+    "fields": {
+        "user": 3,
+        "biography": "",
+        "phone_number": "",
+        "created": "2021-09-14T17:08:09.270Z",
+        "modified": "2021-09-14T17:08:09.270Z",
+        "is_admin": true
+    }
+},
+{
+    "model": "users.myuser",
+    "pk": 4,
+    "fields": {
+        "user": 4,
+        "biography": "",
+        "phone_number": "",
+        "created": "2021-09-14T17:09:26.770Z",
+        "modified": "2021-09-14T17:09:26.771Z",
+        "is_admin": true
+    }
+},
+{
+    "model": "users.myuser",
+    "pk": 5,
+    "fields": {
+        "user": 5,
+        "biography": "",
+        "phone_number": "",
+        "created": "2021-09-14T17:10:30.359Z",
+        "modified": "2021-09-14T17:10:30.359Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "users.myuser",
+    "pk": 6,
+    "fields": {
+        "user": 6,
+        "biography": "",
+        "phone_number": "",
+        "created": "2021-09-14T17:11:10.622Z",
+        "modified": "2021-09-14T17:11:10.622Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "users.myuser",
+    "pk": 7,
+    "fields": {
+        "user": 7,
+        "biography": "",
+        "phone_number": "",
+        "created": "2021-09-14T17:11:53.221Z",
+        "modified": "2021-09-14T17:11:53.221Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "users.myuser",
+    "pk": 8,
+    "fields": {
+        "user": 8,
+        "biography": "",
+        "phone_number": "",
+        "created": "2021-09-14T17:13:40.031Z",
+        "modified": "2021-09-14T17:13:40.031Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "users.myuser",
+    "pk": 9,
+    "fields": {
+        "user": 9,
+        "biography": "",
+        "phone_number": "",
+        "created": "2021-09-14T17:14:19.619Z",
+        "modified": "2021-09-14T17:14:19.619Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "users.myuser",
+    "pk": 10,
+    "fields": {
+        "user": 10,
+        "biography": "",
+        "phone_number": "",
+        "created": "2021-09-14T17:14:57.408Z",
+        "modified": "2021-09-14T17:14:57.408Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "users.myuser",
+    "pk": 11,
+    "fields": {
+        "user": 11,
+        "biography": "",
+        "phone_number": "",
+        "created": "2021-09-14T17:15:32.646Z",
+        "modified": "2021-09-14T17:15:32.646Z",
+        "is_admin": true
+    }
+}
+]
