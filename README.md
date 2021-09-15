@@ -11,26 +11,34 @@
 
 ## Antes de ejecutar la app
 
-- Crea la base datos:
+- Crea la base de datos:
     - Corre el siguiente comando
     ```Bash
     blogApp$ cat DB.sql | psql -U postgre -W 
     ```
     Esto creara la base de datos para recibir todos los modelos.
-    Nota: guarda la contraseña de tu DB en un archivo .env `PASSOWRD=your_password` dentro de la carpeta blogApp en donde está settings.py 
+    Nota: guarda la contraseña de tu DB en un archivo .env `PASSOWRD=your_password` y el puerto al cual te conectarás `PORT=543*`  dentro de la carpeta blogApp en donde está settings.py 
 
 - Ejecuta el comando de `makemigrations` de Django, crea la nuevas migraciones de tus modelos
 
     ```Bash
     blogApp$ python3 manage.py makemigratios 
     ```
-    Asegurate de estar dentro de tu proyecto para correrlo
+    Asegurate de estar dentro del proyecto blogApp o como sea lo hayas nombrado para correrlo
 
-- Por último corre el comando para crear tus modelos dentro de la base de datos
+- Por último, corre el comando para crear los modelos dentro de la base de datos
 
     ```Bash
     blogApp$ python3 manage.py migrate 
     ```
+
+#### !importante
+- [Opcional] puedes cargar los datos contenidos en la carpeta fixtures.
+
+    ```Bash
+    blogApp$ python3 manage.py loaddata fixtures/data_fixture.json
+    ```
+
 
 ## Ejecutar la app
 
@@ -49,3 +57,15 @@ Ahora ingresa al navegador y entra la dirección http.
 ```Bash
 blogApp$ http://localhost:3000/
 ```
+
+## Uso de la App
+
+Cuando ingreses al navegador y escribas la dirección `http://localhost:3000/` automáticamente de redireccionará al login para autenticarte. Una vez aquí tienes 2 opciones:
+
+1. si cargaste los fixtures anterior tienes algunos usuarios disponibles en el archivo `MOCK_DATA.json`para testear la APP
+
+    - Abre el archivo y elije cualquier usuario
+    - toma el username y password.
+    - ingresalos en el login
+
+![](https://imgur.com/z3A8JAa)
