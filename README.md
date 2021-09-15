@@ -51,16 +51,16 @@ Now you have all environment ready to getting started work with it.
     ```Bash
     cd blog-app
     ```
-    Now you'll see your prompt this way. `blog-app$`
+    Now you'll see your prompt look like. `blog-app$`
 
     ### install requirements
     ```Bash
-    pip3 install -r requirements
+    blog-app$ pip3 install -r requirements
     ```
 
     ### type the next command in prompt console command
     ```Bash
-    blog-app$ cat DB.sql | psql -U postgre -W 
+    blog-app$ cat DB.sql | psql -U postgres -W 
     ```
     it creates the DB to get all about models.
 
@@ -75,7 +75,13 @@ Now you have all environment ready to getting started work with it.
     blog-app$ vim .env
     ///////////// password and port //////////
     PASSWORD='yourpwd'
-    PORT=543*
+    PORT=5433
+    ```
+
+    to know port of postgres use:
+    ```Bash
+    blog-app$ sudo service postgresql status
+    10/main (port 5433): online
     ```
 
     Note PASSWORD and PORT are examples. your credential can be different.
@@ -89,7 +95,7 @@ cd ..
 
     ## run the command to create tables models of Django
     ```Bash
-    blog-app$ python3 manage.py makemigratios 
+    blog-app$ python3 manage.py makemigrations 
     ```
 
     ## run the command to create models into DB
@@ -130,8 +136,13 @@ Once into app in web. It'll ask you a login. you have 2 options:
     - Open a file and choices whatever.
     - take username and password.
     - copy and paste in the login.
+    - choice one admin and one standard
+
+    note you'll know which is admin because there'll have
+     a field called is_admin into `MOCK_DATA.json`.
 
 2. create your own user clicking in sign up.
 
     - provide the data required.
     - use your username and password to get login
+
