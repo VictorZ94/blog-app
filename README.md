@@ -2,70 +2,136 @@
 
 ![](https://img.shields.io/badge/Building-Process-green) ![](https://img.shields.io/badge/Python3-Django-brightgreen)
 
-## Ambiente de ejecución
+# Environment
 
 - OS linux - Ubuntu 18.04
-- Python 3.6+ o superior.
+- Python 3.6+
 - Django 3.2.5.
 - PostgreSQL 12.8
 
-## Antes de ejecutar la app
+# Before run
 
-- Crea la base de datos:
-    - Corre el siguiente comando
+- execute the Application isolated by virtualenv python3.
+
+    ### Install pip first
     ```Bash
-    blogApp$ cat DB.sql | psql -U postgre -W 
-    ```
-    Esto creara la base de datos para recibir todos los modelos.
-    Nota: guarda la contraseña de tu DB en un archivo .env `PASSOWRD=your_password` y el puerto al cual te conectarás `PORT=543*`  dentro de la carpeta blogApp en donde está settings.py 
-
-- Ejecuta el comando de `makemigrations` de Django, crea la nuevas migraciones de tus modelos
-
-    ```Bash
-    blogApp$ python3 manage.py makemigratios 
-    ```
-    Asegurate de estar dentro del proyecto blogApp o como sea lo hayas nombrado para correrlo
-
-- Por último, corre el comando para crear los modelos dentro de la base de datos
-
-    ```Bash
-    blogApp$ python3 manage.py migrate 
+    sudo apt-get install python3-pip
     ```
 
-#### !importante
-- [Opcional] puedes cargar los datos contenidos en la carpeta fixtures.
-
+    ### Then install virtualenv using pip3
     ```Bash
-    blogApp$ python3 manage.py loaddata fixtures/data_fixture.json
+    sudo pip3 install virtualenv
+    ```
+
+    ### Now create a virtual environment
+    ```Bash
+    virtualenv Blog 
+    ```
+
+    ### Active your virtual environment
+    ```Bash
+    source Blog/bin/activate
+    ```
+
+    ### move inside Blog virtualenv
+    ```Bash
+    cd Blog
+    ```
+
+    ### clone the project from github page
+    ```Bash
+    git clone https://github.com/VictorZ94/blog-app.git
     ```
 
 
-## Ejecutar la app
+Now you have all environment ready to getting started work with it.
 
+- Create DB:
+    ### move inside blog-app
+    ```Bash
+    cd blog-app
+    ```
+    Now you'll see your prompt this way. `blog-app$`
+
+    ### install requirements
+    ```Bash
+    pip3 install -r requirements
+    ```
+
+    ### type the next command in prompt console command
+    ```Bash
+    blog-app$ cat DB.sql | psql -U postgre -W 
+    ```
+    it creates the DB to get all about models.
+
+- setting your environ viariables.
+    ### move inside folder blogApp
+    ```Bash
+    blog-app$ cd blogApp
+    ```
+
+    ### create and open a file call .env
+    ```Bash
+    blog-app$ vim .env
+    ///////////// password and port //////////
+    PASSWORD='yourpwd'
+    PORT=543*
+    ```
+
+    Note PASSWORD and PORT are examples. your credential can be different.
+
+return to the previous folder.
 ```Bash
-blogApp$ python3 manage.py runserver
+cd ..
 ```
 
-django usa por defecto el puerto 8000.
-si quieres cambiarlo al puerto 3000 o cualquera, corre lo siguiente.
+- Migrations
+
+    ## run the command to create tables models of Django
+    ```Bash
+    blog-app$ python3 manage.py makemigratios 
+    ```
+
+    ## run the command to create models into DB
+    ```Bash
+    blog-app$ python3 manage.py migrate 
+    ```
+
+## Fixtures
+- [Optional] can be upload data contains in folder fixtures
+
+    ```Bash
+    blog-app$ python3 manage.py loaddata fixtures/data_fixture.json
+    ```
+
+## Run Blog App
 
 ```Bash
-blogApp$ python3 manage.py runserver 3000
+blog-app$ python3 manage.py runserver
 ```
 
-Ahora ingresa al navegador y entra la dirección http.
+Django use by default port 8000, if you want change it to the port 3000 instead or whatever. type will.
+
 ```Bash
-blogApp$ http://localhost:3000/
+blog-app$ python3 manage.py runserver 3000
 ```
 
-## Uso de la App
+Now open your preferred browser and type the http address.
+```Bash
+blog-app$ http://localhost:3000/
+```
 
-Cuando ingreses al navegador y escribas la dirección `http://localhost:3000/` automáticamente de redireccionará al login para autenticarte. Una vez aquí tienes 2 opciones:
+## Usage
 
-1. si cargaste los fixtures anterior tienes algunos usuarios disponibles en el archivo `MOCK_DATA.json`para testear la APP
+Once into app in web. It'll ask you a login. you have 2 options:
 
-    - Abre el archivo y elije cualquier usuario
-    - toma el username y password.
-    - ingresalos en el login
+1. if you used fixtures mentioned previously there're some users available in the file `MOCK_DATA.json` use them for test the WebApp Blog.
 
-![Usuarios disponibles](https://i.imgur.com/z3A8JAa.png)
+    - Open a file and choices whatever.
+    - take username and password.
+    - copy and paste in the login.
+
+2. create your own user clicking in sign up.
+
+    - provide the data required.
+    - use your username and password to get login
