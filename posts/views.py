@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
+from django.contrib.auth.decorators import login_required
 
 # models 
 from django.contrib.auth.models import User
@@ -11,6 +12,7 @@ from .forms import PostForm
 from .forms import NewCommentForm
 
 
+@login_required(login_url='/login/')
 def list_posts(request):
     """ view to list existing posts
     """
@@ -19,18 +21,17 @@ def list_posts(request):
         posts = Post.objects.select_related('author')\
         .filter(category=category)\
         .order_by('-modified')
-        likes = Likes.objects.select_related('post')
         # import pdb; pdb.set_trace()
         return render(request, 'posts/index.html',
-                  {'posts': posts, 'likes': likes})
+                  {'posts': posts})
 
     posts = Post.objects.select_related('author').order_by('-modified')
     likes = Likes.objects.select_related('post')
 
     return render(request, 'posts/index.html',
-                  {'posts': posts, 'likes': likes})
+                  {'posts': posts})
 
-
+@login_required(login_url='/login/')
 def read_post(request, post_id, author_id, slug):
     """ view to read the posts
     to receive a slug like arg
@@ -55,7 +56,7 @@ def read_post(request, post_id, author_id, slug):
     return render(request, 'posts/read_post.html',
                     {'comments': comments, 'post': post, 'like': like })
 
-
+@login_required(login_url='/login/')
 def delete_comment(request, post_id, author_id, slug, comment_id):
     """ delete post comment 
     """
@@ -64,7 +65,7 @@ def delete_comment(request, post_id, author_id, slug, comment_id):
     return redirect('read', post_id=post_id, 
                     author_id=author_id, slug=slug)
 
-
+@login_required(login_url='/login/')
 def create_post(request):
     """ create and publish blog/post
     """
@@ -89,7 +90,7 @@ def create_post(request):
 
     return render(request, 'posts/create_post.html')
 
-
+@login_required(login_url='/login/')
 def author_posts(request, author_id):
     """ List existing posts by author
     """
@@ -103,7 +104,7 @@ def author_posts(request, author_id):
     return render(request, 'posts/authors.html',
                   {'posts': posts})
 
-
+@login_required(login_url='/login/')
 def edit_post(request, slug):
     """ this view allow us modify a post
     """
@@ -117,7 +118,7 @@ def edit_post(request, slug):
 
     return render(request, 'posts/edit.html', {'post': post})
 
-
+@login_required(login_url='/login/')
 def delete_post(request, id):
     """ delete a post
     """
@@ -125,7 +126,7 @@ def delete_post(request, id):
     post.delete()
     return redirect('post')
 
-
+@login_required(login_url='/login/')
 def like(request, post_id, author_id, slug):
     """ button like
     """
