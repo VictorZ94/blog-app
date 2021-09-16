@@ -23,13 +23,14 @@ def list_posts(request):
         .order_by('-modified')
         # import pdb; pdb.set_trace()
         return render(request, 'posts/index.html',
-                  {'posts': posts})
+                      {'posts': posts})
 
     posts = Post.objects.select_related('author').order_by('-modified')
     likes = Likes.objects.select_related('post')
 
     return render(request, 'posts/index.html',
                   {'posts': posts})
+
 
 @login_required(login_url='/login/')
 def read_post(request, post_id, author_id, slug):
@@ -56,6 +57,7 @@ def read_post(request, post_id, author_id, slug):
     return render(request, 'posts/read_post.html',
                     {'comments': comments, 'post': post, 'like': like })
 
+
 @login_required(login_url='/login/')
 def delete_comment(request, post_id, author_id, slug, comment_id):
     """ delete post comment 
@@ -64,6 +66,7 @@ def delete_comment(request, post_id, author_id, slug, comment_id):
     comment.delete()
     return redirect('read', post_id=post_id, 
                     author_id=author_id, slug=slug)
+
 
 @login_required(login_url='/login/')
 def create_post(request):
@@ -90,6 +93,7 @@ def create_post(request):
 
     return render(request, 'posts/create_post.html')
 
+
 @login_required(login_url='/login/')
 def author_posts(request, author_id):
     """ List existing posts by author
@@ -103,6 +107,7 @@ def author_posts(request, author_id):
 
     return render(request, 'posts/authors.html',
                   {'posts': posts})
+
 
 @login_required(login_url='/login/')
 def edit_post(request, slug):
@@ -118,6 +123,7 @@ def edit_post(request, slug):
 
     return render(request, 'posts/edit.html', {'post': post})
 
+
 @login_required(login_url='/login/')
 def delete_post(request, id):
     """ delete a post
@@ -125,6 +131,7 @@ def delete_post(request, id):
     post = Post.objects.get(id=int(id))
     post.delete()
     return redirect('post')
+
 
 @login_required(login_url='/login/')
 def like(request, post_id, author_id, slug):
