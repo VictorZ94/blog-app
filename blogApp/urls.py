@@ -34,7 +34,7 @@ urlpatterns = [
     path('logout/', users_views.logout_view, name='logout'),
 
     # path like
-    path('like/<int:post_id>/<int:author_id>/', posts_views.like, name="like"),
+    path('like/<int:post_id>/<int:author_id>/<str:slug>/', posts_views.like, name="like"),
 
     # path to delete comment
     path('del_comment/<int:post_id>/<int:author_id>/<str:slug>/<int:comment_id>/', 
