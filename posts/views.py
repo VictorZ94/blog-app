@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.views.generic import DetailView
+from django.http import HttpResponse, JsonResponse
 
 # models 
 from django.contrib.auth.models import User
@@ -45,13 +45,16 @@ def read_post(request, post_id, author_id, slug):
 
         post = Post.objects.get(slug=slug)
         comments = BlogComment.objects.filter(blogpost=post_id)
+        like = Likes.objects.filter(post_id=post_id)
         return render(request, 'posts/read_post.html',
-                      {'comments': comments, 'post': post })
+                      {'comments': comments, 'post': post,'like': like})
 
     post = Post.objects.get(slug=slug)
     comments = BlogComment.objects.filter(blogpost=post_id)
+    like = Likes.objects.filter(post_id=post_id)
     return render(request, 'posts/read_post.html',
-                    {'comments': comments, 'post': post })
+                    {'comments': comments, 'post': post, 'like': like })
+
 
 def delete_comment(request, post_id, author_id, slug, comment_id):
     """ delete post comment 
@@ -60,6 +63,7 @@ def delete_comment(request, post_id, author_id, slug, comment_id):
     comment.delete()
     return redirect('read', post_id=post_id, 
                     author_id=author_id, slug=slug)
+
 
 def create_post(request):
     """ create and publish blog/post
@@ -84,6 +88,7 @@ def create_post(request):
         return redirect('post')
 
     return render(request, 'posts/create_post.html')
+
 
 def author_posts(request, author_id):
     """ List existing posts by author
@@ -121,7 +126,7 @@ def delete_post(request, id):
     return redirect('post')
 
 
-def like(request, post_id, author_id):
+def like(request, post_id, author_id, slug):
     """ button like
     """
     if request.method == 'POST':
@@ -129,8 +134,8 @@ def like(request, post_id, author_id):
         post = Post.objects.get(id=post_id)
         like = Likes(user=user, post=post)
         like.save()
-
-    return redirect('post')
+        return redirect('read', post_id=post_id, 
+                        author_id=author_id, slug=slug)
 
 def root(request):
     """ redirect to login
