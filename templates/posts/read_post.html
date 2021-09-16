@@ -2,6 +2,37 @@
 
 {% block head_content %}
     <title>Blog App - Read posts</title>
+    <style>
+        /* css styles for button like */
+    button {
+        background: #fff;
+        border: unset;
+        outline: 0;
+        font-size: 18px;
+        cursor: pointer;
+        color: #65676b;
+        padding: 5px 10px;
+    }
+    button.liked {
+    color: #0571ed;
+    }
+    button.liked i{
+    animation: anim 0.5s ease-in-out;
+    -webkit-animation: anim 0.5s ease-in-out;
+    }
+
+    @keyframes anim {
+        100% {
+            transform: rotate(-15deg) scale(1.3);
+            -webkit-transform: rotate(-15deg) scale(1.3);
+            -moz-transform: rotate(-15deg) scale(1.3);
+            -ms-transform: rotate(-15deg) scale(1.3);
+            -o-transform: rotate(-15deg) scale(1.3);
+            filter: blur(0.5px);
+            -webkit-filter: blur(0.5px);
+        }
+    }
+    </style>
 {% endblock %}
 
 {% block body_content %}
@@ -13,10 +44,19 @@
                 <p class="card-text text-center">
                     {{ post.content|linebreaks }}
                 </p>
+                <form action="{% url 'like' post.id user.id post.slug %}" method="POST">
+                    {% csrf_token %}
+                    <button id="like" class="liked" onclick="liked()">
+                        <i class="fa fa-thumbs-up"></i>
+                        <span class="icon">Like {{ like|length }}</span>
+                    </button>
+                </form>
             </div>
         </div>
     </div>
-<HR></HR>
+    <HR></HR>
+
+    <!-- Section comments -->
     <div class="container">
         <div class="row">
             <div class="card my-4">
@@ -33,6 +73,8 @@
             </div>
         </div>
     </div>
+
+    <!-- Section comments -->
     <div class="container">
         <div class="row">
             {% for comment in comments %}
@@ -43,7 +85,7 @@
                 <div class="card-body">
                     <p class="text-muted">{{ comment.date_posted }}</p>
                     <p class="card-text">{{ comment.content|linebreaks }}</p>
-                    <button><a href="{% url 'del_comment' post.id user.id post.slug comment.id %} " class="btn btn-danger">DELETE</a></button>
+                    <a href="{% url 'del_comment' post.id user.id post.slug comment.id %} " class="btn btn-danger">DELETE</a>
                   </div>
             </div>
             {% empty %}

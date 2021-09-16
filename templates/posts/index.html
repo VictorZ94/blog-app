@@ -14,28 +14,21 @@
 
         <div class="container">
             <div class="row">
-                
+
                 {% block search %}
                     {% include 'posts/search.html' %}
                 {% endblock search %}
-                    
+
                 {% for post in posts %}
                 <!-- Blog Entries Column -->
 
-                    <div class="col-md-8 mt-3 right">
+                    <div class="col-md-8 mt-3 right" id="{{ post.id }}">
                         <div class="card mb-4">
                             <div class="card-body">
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text text-muted h6"> @{{ post.author }} | {{ post.modified }} | {{ post.category}} </p>
                                 <p class="card-text">{{ post.content }}</p>
                                 <a href="{% url 'read' post.id user.id post.slug %}" class="btn btn-primary">Read More &rarr;</a>
-                                <form action="{% url 'like' post.id user.id %}" method="POST">
-                                    {% csrf_token %}
-                                    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                                        <input type="submit" class="btn-check" name="like "id="{{ post.id }}" autocomplete="off">
-                                        <label class="btn-sm btn-outline-primary" for="{{ post.id }}">Like {{ likes|length }}</label>
-                                    </div>
-                                </form>
                             </div>
                         </div>
                     </div>
