@@ -146,3 +146,9 @@ Once into app in web. It'll ask you a login. you have 2 options:
 
     - Provide the data required.
     - Use your username and password to get login
+
+## Usage App
+
+for understanding how you should use the app. please watch this video.
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://youtu.be/UVYurs1-rMU)
